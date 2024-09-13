@@ -1,0 +1,455 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Friz Quadrata';
+    src: url(assets/fontes/Friz-quadrata/Friz\ Quadrata\ Bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Beaufort';
+    src: url(assets/fontes/Beaufort/BeaufortforLOL-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Beaufort';
+    src: url(assets/fontes/Beaufort/BeaufortforLOL-Light.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Beaufort';
+    src: url(assets/fontes/Beaufort/BeaufortforLOL-Light.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Beaufort';
+    src: url(assets/fontes/Beaufort/BeaufortforLOL-Lightttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Beaufort';
+    src: url(assets/fontes/Beaufort/BeaufortforLOL-Bold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Beaufort';
+    src: url(assets/fontes/Beaufort/BeaufortforLOL-Heavy.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Spiegel';
+    src: url(assets/fontes/Spiegel/SpiegelSans-2ExtraLight_TRIAL.otf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Spiegel';
+    src: url(assets/fontes/Spiegel/SpiegelSans-3Light_TRIAL.otf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Spiegel';
+    src: url(assets/fontes/Spiegel/SpiegelSans-4SemiLight_TRIAL.otf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Spiegel';
+    src: url(assets/fontes/Spiegel/SpiegelSans-5Regular_TRIAL.otf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Spiegel';
+    src: url(assets/fontes/Spiegel/SpiegelSans-6SemiBold_TRIAL.otf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Spiegel';
+    src: url(assets/fontes/Spiegel/SpiegelSans-7Bold_TRIAL.otf);
+    font-weight: 600;
+}
+
+:root {
+    --background: #111111;
+    --destaque: #5d0bc1;
+    --botao: #410cbd;
+    --botao-hover: #22017d;
+    --texto-primario: #FFFFFF;
+    --texto-secundario: #ffffff;
+
+    --fonte-logo: 'Friz Quadrata', sans-serif;
+    --fonte-titulo: 'Beaufort', sans-serif;
+    --fonte-texto: 'Spiegel', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--background);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(24, 5, 77, 0.582);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--destaque);
+    border-radius: 10px;
+}
+
+header {
+    background-color: var(--background);
+    width: 10vw;
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    user-select: none;
+}
+
+/* NAV */
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    justify-content: center;
+    list-style-type: none;
+    font-family: var(--fonte-titulo);
+    user-select: none;
+}
+
+
+
+.nav-menu a {
+    text-decoration: none;
+    user-select: none;
+}
+
+nav a {
+    nav a {
+        display: block;
+        padding: 10px;
+        color: #333;
+    }
+}
+
+.menu-categoria>a {
+    color: var(--destaque);
+    font-weight: bold;
+    padding: 15px;
+}
+
+.menu-categoria:hover .menu-dropdown {
+    display: block;
+}
+
+.menu-categoria>ul>li>a {
+    color: var(--texto-primario);
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav li {
+    position: relative;
+}
+
+.menu-dropdown {
+    position: absolute;
+    z-index: 1;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    display: none;
+
+}
+
+.menu-dropdown li {
+    width: 100%;
+    background-color: var(--background);
+    padding: 10px 5px;
+}
+
+.menu-dropdown a:hover {
+    color: var(--destaque);
+}
+
+/* --------------------- */
+
+.main-home {
+    background-image: url(https://cdna.artstation.com/p/assets/images/images/043/575/138/large/paul-david-cyberpunk-matte.jpg?1637678701);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.main-artistas {
+    background-image: url(https://cdna.artstation.com/p/assets/images/images/043/575/138/large/paul-david-cyberpunk-matte.jpg?1637678701);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.container-pesquisa {
+    background-color: #111111de;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    border-radius: 20px;
+    gap: 40px;
+    margin-top: 100px;
+}
+
+.item-pesquisa {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: var(--destaque);
+    font-family: var(--fonte-logo);
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+.container-pesquisa p {
+    color: var(--texto-primario);
+    text-shadow: 1px 1px 1px rgba(24, 5, 77, 0.582);
+    font-family: var(--fonte-texto);
+    width: 80%;
+}
+
+.pesquisa-titulo {
+    font-family: var(--fonte-titulo);
+    color: var(--destaque);
+    text-shadow: 1px 1px 1px rgba(24, 5, 77, 0.582);
+    text-align: center;
+}
+
+.pesquisa-barra {
+    font-family: var(--fonte-texto);
+    width: 50%;
+    padding: 10px;
+    font-size: .75em;
+    border-radius: 20px;
+    border: none;
+}
+
+.pesquisa-botao {
+    width: 20%;
+    background-color: var(--botao);
+    border-radius: 20px;
+    border: none;
+    font-family: var(--fonte-texto);
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    text-shadow: 1px 1px 1px rgba(24, 5, 77, 0.582);
+}
+
+.pesquisa-botao:hover {
+    box-shadow: 0px 0px 10px var(--botao-hover);
+    background-color: var(--botao-hover);
+}
+
+#erro-pesquisa {
+    color: rgba(24, 5, 77, 0.582);
+    font-size: .75;
+    text-align: center;
+    box-shadow: 1px solid rgba(0, 0, 0, 0.385);
+}
+
+footer {
+    font-family: var(--fonte-texto);
+    background-color: var(--background);
+    color: var(--texto-secundario);
+    width: 100vw;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.link-rodape {
+    text-decoration: none;
+    color: var(--botao);
+}
+
+.link-rodape:hover {
+    color: var(--botao-hover);
+    text-decoration: underline;
+}
+
+@media (max-width:1024px) {
+    .item-pesquisa {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .pesquisa-barra {
+        width: 80%;
+    }
+
+    .pesquisa-botao {
+        padding: 10px;
+        width: 80%;
+    }
+
+    .container-pesquisa {
+        width: 95%;
+    }
+
+    section.container-resultado {
+        width: 95%;
+    }
+}
+
+.container-resultado {
+    background-color: #111111de;
+    width: 70%;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+#resultados-pesquisa {
+    display: none;
+}
+
+.item-resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 200px;
+    border: 1px solid var(--destaque);
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.item-resultado:hover {
+    background-color: rgba(255, 255, 255, 0.082);
+    position: relative;
+    top: -10px;
+    box-shadow: 0px 0px 5px var(--destaque);
+}
+
+.item-resultado img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 2px solid var(--destaque);
+    padding: 5px;
+}
+
+.item-resultado-descricao {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: -0.02em;
+    word-spacing: -0.05em;
+    text-align: justify;
+}
+
+.item-resultado-descricao h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif);
+    font-weight: bold;
+    color: var(--destaque);
+    font-size: 0.5.9em;
+    letter-spacing: -0.09em;
+    word-spacing: -0.09em;
+    text-align: center;
+}
+
+.item-resultado-descricao p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif);
+    color: var(--texto-primario);
+    font-size: .9em;
+    letter-spacing: -0.07em;
+    word-spacing: -0.12m;
+}
+
+.item-resultado-descricao a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--botao);
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: -0.1em;
+    word-spacing: -0.1em;
+}
+
+.item-resultado-descricao a:hover {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+    letter-spacing: -0.02em;
+    word-spacing: -0.05em;
+}
+
+@media (max-width:767px) {
+    .item-resultado {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        flex-direction: column;
+        width: 90%;
+        letter-spacing: -0.01em;
+    word-spacing: -0.01em;
+    }
+}
